@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
           
           {/* Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mb-16 animate-fade-in" style={{animationDelay: '0.3s'}}>
-            <a href="#projects" className="group flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-full font-bold transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+            <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-full font-bold transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)]">
               View My Work
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
 
           {/* Social Proof / Links */}
           <div className="flex flex-wrap justify-center gap-8 text-slate-500 animate-fade-in border-t border-slate-800 pt-8 w-full max-w-3xl" style={{animationDelay: '0.4s'}}>
-            <a href={PERSONAL_INFO.github} className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+            <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-cyan-400 transition-colors">
               <Github size={20} /> <span className="text-sm">GitHub</span>
             </a>
             <a href={`mailto:${PERSONAL_INFO.email}`} className="flex items-center gap-2 hover:text-cyan-400 transition-colors">

@@ -9,7 +9,7 @@ export const PERSONAL_INFO = {
   phone: "+1 408 210 6386",
   email: "mohitreddyamanaganti@gmail.com",
   linkedin: "https://www.linkedin.com/in/mohit-reddy-01a001286", 
-  github: "https://github.com/mohitreddy123",     
+  github: "https://github.com/mohitreddy1302",     
 };
 
 export const SKILLS: SkillCategory[] = [
