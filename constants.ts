@@ -8,7 +8,7 @@ export const PERSONAL_INFO = {
   location: "San Jose, CA 95113",
   phone: "+1 408 210 6386",
   email: "mohitreddyamanaganti@gmail.com",
-  linkedin: "https://www.linkedin.com/in/mohit-reddy-amanaganti", 
+  linkedin: "https://www.linkedin.com/in/mohit-reddy-01a001286", 
   github: "https://github.com/mohitreddy123",     
 };
 
