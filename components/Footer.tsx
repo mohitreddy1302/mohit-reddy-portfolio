@@ -1,6 +1,6 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../constants';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, FileText } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="text-center md:text-left">
                     <h2 className="text-2xl font-bold text-white mb-2">Let's Connect</h2>
-                    <p className="text-slate-400 text-sm">Open for Full Stack Developer opportunities.</p>
+                    <p className="text-slate-400 text-sm">Open to full-time roles, internships, and exciting projects.</p>
                 </div>
                 
                 <div className="flex gap-4">
@@ -19,8 +19,17 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             
-            <div className="mt-12 pt-8 border-t border-slate-900 text-center text-slate-600 text-sm">
-                <p>&copy; {new Date().getFullYear()} Mohit Reddy Amanaganti. Built with React & Tailwind.</p>
+            <div className="mt-12 pt-8 border-t border-slate-900 text-center">
+                <a 
+                    href="/certificates/Mohit_Resume.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] mb-6"
+                >
+                    <FileText size={18} />
+                    View Resume
+                </a>
+                <p className="text-slate-600 text-sm">&copy; {new Date().getFullYear()} Mohit Reddy Amanaganti. Built with React & Tailwind.</p>
             </div>
         </div>
     </footer>
