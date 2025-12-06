@@ -15,33 +15,35 @@ export const PERSONAL_INFO = {
 export const SKILLS: SkillCategory[] = [
   {
     category: "Programming Languages",
-    skills: ["Java", "Python", "JavaScript", "TypeScript", "C"],
-  },
-  {
-    category: "Frontend Technologies",
-    skills: ["React.js", "HTML5", "CSS3", "Bootstrap", "Axios", "Tailwind CSS", "Angular"],
+    skills: ["Python", "Java", "JavaScript", "C", "C++", "Go", "Bash/Shell", "TypeScript"],
   },
   {
     category: "Databases",
-    skills: ["MySQL", "MongoDB", "PostgreSQL"],
+    skills: ["MySQL", "PostgreSQL", "MongoDB", "DynamoDB", "AWS RDS"],
+  },
+  {
+    category: "Frontend Technologies",
+    skills: ["HTML", "CSS", "JavaScript", "React.js", "Bootstrap", "Axios"],
+  },
+  {
+    category: "DevOps",
+    skills: ["Docker", "Kubernetes"],
+  },
+  {
+    category: "Version Control and CI/CD",
+    skills: ["Git", "GitHub", "GitLab", "Jenkins", "CI/CD Pipelines"],
+  },
+  {
+    category: "Backend Technologies",
+    skills: ["Node.js", "Flask", "Spring Boot", "JUnit", "Kafka"],
+  },
+  {
+    category: "APIs and Integration",
+    skills: ["REST APIs"],
   },
   {
     category: "Cloud",
-    skills: ["AWS (EC2, S3, DynamoDB, Lambda, ECS, EKS)", "Azure"],
-  },
-  {
-    category: "DevOps and Version Control Tools",
-    skills: [],
-    subcategories: [
-      {
-        name: "DevOps",
-        skills: ["Docker", "Kubernetes", "CI/CD Pipelines"],
-      },
-      {
-        name: "Version Control",
-        skills: ["Git", "GitHub"],
-      },
-    ],
+    skills: ["AWS (EC2, Lambda, S3, VPC, ELB, IAM, CloudTrail, CloudWatch, ECS, EKS, Athena)", "Microsoft Azure"],
   },
 ];
 

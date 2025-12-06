@@ -10,7 +10,7 @@ const Skills: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         <SectionHeader title="Technical Arsenal" subtitle="Skills & Expertise" centered />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {SKILLS.map((category, idx) => (
             <div key={idx} className="group glass-card p-8 rounded-2xl hover:bg-slate-800/50 transition-all duration-300 hover:-translate-y-2">
               <div className="h-2 w-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6 group-hover:w-full transition-all duration-500"></div>
