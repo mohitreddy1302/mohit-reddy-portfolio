@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
                   <a 
                     key={link.name} 
                     href={link.href} 
-                    className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all"
+                    className="px-4 py-2.5 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-full transition-all duration-200"
                   >
                     {link.name}
                   </a>
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
               </div>
               
               <div className="hidden md:block">
-                  <a href="#contact" className="px-5 py-2 bg-white text-slate-900 hover:bg-cyan-50 text-sm font-bold rounded-full transition-colors shadow-[0_0_10px_rgba(255,255,255,0.3)]">
+                  <a href="#contact" className="px-5 py-2.5 bg-white text-slate-900 hover:bg-cyan-50 text-sm font-bold rounded-full transition-all duration-200 hover:shadow-[0_0_15px_rgba(255,255,255,0.25)] active:scale-[0.98]">
                     Contact
                   </a>
               </div>
