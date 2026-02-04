@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             
             <div className="mt-12 pt-8 border-t border-slate-900 text-center">
                 <a 
-                    href="/certificates/Mohit_Resume (1).pdf" 
+                    href="/Mohit_Resume.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] mb-6"

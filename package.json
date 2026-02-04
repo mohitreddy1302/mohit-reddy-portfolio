@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fix:permissions": "chmod +x node_modules/esbuild/bin/esbuild 2>/dev/null; chmod +x node_modules/@esbuild/darwin-arm64/bin/esbuild 2>/dev/null; xattr -cr node_modules/esbuild node_modules/@esbuild 2>/dev/null; echo 'Permissions and quarantine fixed.'"
   },
   "dependencies": {
     "lucide-react": "^0.554.0",
