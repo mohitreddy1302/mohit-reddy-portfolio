@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
                     <FileText size={18} />
                     View Resume
                 </a>
-                <p className="text-slate-600 text-sm">&copy; {new Date().getFullYear()} Mohit Reddy Amanaganti. Built with React & Tailwind.</p>
+                <p className="text-slate-600 text-sm">&copy; {new Date().getFullYear()} Mohit Reddy. Built with React & Tailwind.</p>
             </div>
         </div>
     </footer>
