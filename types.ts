@@ -18,6 +18,7 @@ export interface Education {
   degree: string;
   period: string;
   gpa?: string;
+  coursework?: string;
 }
 
 export interface Certification {

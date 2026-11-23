@@ -3,48 +3,57 @@ import { Experience, Project, Education, Certification, SkillCategory } from './
 export const PERSONAL_INFO = {
   name: "Mohit Reddy",
   title: "Software Engineer",
-  summary: "Software Engineer building full-stack applications and scalable backend services using Java/Spring Boot, React, and AWS. Strong foundations in data structures, algorithms, and distributed systems, with hands-on experience in REST APIs, PostgreSQL/MongoDB, CI/CD, and container orchestration using Docker and Kubernetes.",
+  summary: "Software Engineer building backend services and full-stack applications in Java, Spring Boot, React, and AWS. Shipped production features at Cleartrip and AppStance spanning travel insurance claims, checkout payments, and ad-analytics pipelines. Experienced in distributed systems (Go, gRPC, Raft), Kubernetes, and ML-powered search (PyTorch, FAISS).",
   location: "San Jose, CA 95113",
   phone: "+1 408 210 6386",
   email: "mintureddy1302@gmail.com",
   linkedin: "https://www.linkedin.com/in/mohit-reddy-01a001286",
   github: "https://github.com/mohitreddy1302",
+  portfolio: "https://mohit-reddy-portfolio.vercel.app/",
 };
 
 export const SKILLS: SkillCategory[] = [
   {
     category: "Languages",
-    skills: ["Java", "Python", "SQL", "JavaScript", "TypeScript", "C++", "C", "Bash"],
+    skills: ["Java", "Python", "Go", "SQL", "JavaScript", "TypeScript", "C++", "C", "Bash"],
   },
   {
     category: "Backend & Distributed Systems",
-    skills: ["Spring Boot", "Microservices", "REST APIs", "Apache Kafka", "GraphQL", "JUnit", "Mockito", "Node.js"],
+    skills: ["Spring Boot", "FastAPI", "Node.js", "Microservices", "REST APIs", "gRPC", "GraphQL", "Raft", "Apache Kafka", "OAuth2", "OpenAPI"],
+  },
+  {
+    category: "AI / ML & Search",
+    skills: ["PyTorch", "ONNX Runtime", "FAISS", "Hugging Face", "BM25", "pandas", "NumPy"],
   },
   {
     category: "Databases",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "DynamoDB"],
+    skills: ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "BoltDB"],
   },
   {
     category: "Cloud & DevOps",
-    skills: ["AWS (EC2, S3, RDS, Lambda, IAM, CloudWatch)", "Docker", "Kubernetes", "CI/CD Pipelines", "Git", "GitHub"],
+    skills: ["AWS (EC2, S3, RDS, Lambda, EventBridge, IAM, CloudWatch)", "Docker", "Kubernetes", "Helm", "Jenkins", "CI/CD", "Git"],
+  },
+  {
+    category: "Testing & Observability",
+    skills: ["JUnit 5", "Mockito", "WireMock", "Testcontainers", "Prometheus", "Grafana"],
   },
   {
     category: "Frontend",
-    skills: ["React.js", "HTML/CSS", "Bootstrap"],
+    skills: ["React.js", "Redux Toolkit", "React Hook Form", "HTML/CSS", "Bootstrap"],
   },
 ];
 
 export const EXPERIENCE: Experience[] = [
   {
     company: "AppStance – Apple Ads AI Platform",
-    role: "Software Engineer",
-    period: "May 2026 – Present",
+    role: "Software Engineer Intern",
+    period: "May 2026 – Aug 2026",
     description: [
       "Reduced initial render time of the keyword performance dashboard from 3.2s to 2.2s (30% faster) by implementing component-level code splitting and lazy loading using React.lazy and Suspense in React.",
-      "Built an automated data archival pipeline using AWS Lambda (Python) and Amazon S3 to store daily keyword-level performance data, including spend, taps, and bids, retrieved from the Apple Ads API and scheduled via AWS EventBridge, reducing manual data export and backup work.",
-      "Contributed to a webhook handler using Spring Boot (Java) to ingest real-time Apple Ads campaign status updates into PostgreSQL, reducing dashboard data staleness from 15 minutes to under 2 minutes for a subset of test accounts.",
-      "Implemented retry logic with exponential backoff in Spring Boot for failed AppsFlyer API calls, reducing synchronization failures in the module by an estimated 40% during testing.",
-      "Developed a Python data validation script using pandas to compare sampled Apple Ads keyword records against internal PostgreSQL entries, identifying data mismatches in approximately 3% of the records analyzed.",
+      "Engineered an automated data archival pipeline using AWS Lambda (Python), Amazon S3, and AWS EventBridge to extract 15,000+ daily keyword metrics (spend, taps, bids) from the Apple Ads API, eliminating manual CSV exports.",
+      "Co-developed a Spring Boot (Java) webhook handler to ingest real-time Apple Ads campaign status updates into PostgreSQL, reducing dashboard data staleness from 15 minutes to under 2 minutes for live client accounts.",
+      "Implemented retry logic with exponential backoff in Spring Boot (Java) for transient AppsFlyer API errors, cutting attribution sync failures by 40% in production.",
+      "Built a Python (pandas) validation script reconciling Apple Ads API keyword records against PostgreSQL, catching a 3% mismatch rate that drove a sync bug fix and restored dashboard accuracy.",
     ],
   },
   {
@@ -52,11 +61,11 @@ export const EXPERIENCE: Experience[] = [
     role: "Software Development Engineer",
     period: "May 2024 – Jun 2025",
     description: [
-      "Designed an end-to-end Medical Flight Cancellation and Insurance Claims feature, driving contract-first API design in OpenAPI and modelling cancellation, document, and claim-status collections in MongoDB, enabling customer self-serve cancellations and cutting manual agent effort by 40%.",
-      "Integrated a third-party insurance claims service via Spring WebClient over OAuth2 client-credentials auth to auto-initiate claims at cancellation, removing a separate submission step and improving claim turnaround by 30%.",
-      "Built a TV License checkout flow for South African customers in React.js using React Hook Form and Redux Toolkit for multi-step state and inline payment, consolidating an off-site payment journey into a single checkout.",
-      "Hardened PII exchange across both integrations with Bean Validation, field-level encryption, and log masking, and instrumented flows with Micrometer, Prometheus, and Grafana alerting to catch upstream degradation before customer impact.",
-      "Covered both integrations with JUnit 5, Mockito, WireMock contract tests, and Testcontainers MongoDB tests, gated in Jenkins CI ahead of Helm deploys to Kubernetes.",
+      "Designed an end-to-end Medical Flight Cancellation & Insurance Claims feature with contract-first OpenAPI specs and MongoDB data models, enabling self-serve cancellations and cutting manual agent effort by 40%.",
+      "Integrated a third-party insurance claims service via Spring WebClient (Java) over OAuth2 client-credentials auth to auto-initiate claims at cancellation, removing a separate submission step and improving claim turnaround by 30%.",
+      "Built a multi-step TV License checkout for South African customers in React.js using React Hook Form and Redux Toolkit, replacing an off-site payment redirect with inline payment in a single checkout.",
+      "Secured and instrumented both integrations, protecting PII with Bean Validation, field-level encryption, and log masking while configuring Micrometer, Prometheus, and Grafana alerts to catch upstream degradation early.",
+      "Engineered automated test suites across both integrations with JUnit 5, Mockito, WireMock stubs, and Testcontainers (MongoDB), gating Jenkins CI to catch contract regressions before Helm and Kubernetes deploys.",
     ],
   },
 ];
@@ -65,8 +74,10 @@ export const EDUCATION: Education[] = [
   {
     institution: "San Jose State University, San Jose, CA",
     degree: "Master of Science in Software Engineering",
-    period: "Aug 2025 – May 2027 (Expected)",
+    period: "Aug 2025 – May 2027",
     gpa: "GPA: 3.8",
+    coursework:
+      "Data Structures and Algorithms, Operating Systems, Distributed Systems, Software Systems Engineering, Enterprise Software Platforms, Data Mining, Generative AI, Software Security Technologies",
   },
   {
     institution: "CVR College of Engineering, Hyderabad, India",
@@ -78,63 +89,83 @@ export const EDUCATION: Education[] = [
 
 export const PROJECTS: Project[] = [
   {
-    title: "Spartan Exchange",
-    subtitle: "Campus Marketplace · Sep 2025 – Dec 2025",
-    technologies: ["React", "Spring Boot", "PostgreSQL", "Docker", "AWS", "JWT"],
+    title: "Fault-Tolerant Distributed Job Scheduler",
+    subtitle: "Distributed Systems",
+    technologies: ["Go", "gRPC", "Raft", "BoltDB", "Docker", "AWS EC2"],
     description: [
-      "Engineered a full-stack campus marketplace using React, Spring Boot, and PostgreSQL, supporting secure authentication, product listings, advanced filtering (category, price, keyword), and image uploads to streamline peer-to-peer transactions.",
-      "Designed and integrated a real-time chat system enabling direct buyer–seller communication tied to product listings, improving user interaction and accelerating transaction workflows.",
-      "Containerized backend services with Docker and deployed on AWS EC2, configured PostgreSQL on RDS and media storage on S3, and implemented JWT-based authentication to ensure secure, scalable, and production-ready infrastructure.",
+      "Architected an at-least-once distributed job scheduler in Go, assigning work via time-bound gRPC leases reclaimed on expiry, sustaining 500 simulated jobs/sec across 3 coordinator and 3 worker AWS EC2 nodes.",
+      "Implemented Raft-based state replication (hashicorp/raft) with BoltDB log persistence, achieving <3s leader failover with zero committed-job loss across 100 crash and network-partition tests.",
+      "Designed exponential-backoff retries deduplicated via idempotency keys, sustaining 99.9% job completion under randomized worker failures with zero duplicate side effects across 10,000 retried jobs.",
+    ],
+  },
+  {
+    title: "Semantic Search & Ranking Engine",
+    subtitle: "AI / ML & Search",
+    technologies: ["Python", "PyTorch", "ONNX Runtime", "FAISS", "FastAPI", "Docker"],
+    description: [
+      "Engineered a hybrid retrieval pipeline over 1M MS MARCO passages, fusing BM25 with dense FAISS search via reciprocal rank fusion, raising Recall@100 from 0.68 to 0.78 over BM25 alone on 5,000 queries.",
+      "Added a MiniLM cross-encoder to re-rank the top 50 hybrid candidates, boosting NDCG@10 from 0.42 to 0.53 over un-reranked hybrid retrieval while capping inference cost to a fixed candidate pool.",
+      "Quantized PyTorch models to INT8 ONNX and served them with ONNX Runtime behind a Dockerized FastAPI service, cutting p95 latency from 430 ms to 250 ms at 10 QPS on an 8-core CPU with no GPU.",
+    ],
+  },
+  {
+    title: "Spartan Exchange",
+    subtitle: "Campus Marketplace",
+    technologies: ["React", "TypeScript", "Spring Boot", "Apache Kafka", "WebSocket", "PostgreSQL", "Docker", "AWS"],
+    description: [
+      "Engineered a full-stack campus marketplace using React (TypeScript), Spring Boot, and PostgreSQL, implementing indexed multi-criteria search (category, price, keyword) and paginated APIs to eliminate full-table scans.",
+      "Built listing-bound real-time chat with Spring WebSocket (STOMP), publishing message and price-drop events to Apache Kafka to drive async buyer–seller notifications, with history persisted in PostgreSQL.",
+      "Containerized services with Docker on AWS EC2 backed by RDS, S3 presigned uploads with client-side image compression (cutting payload size by 60%), and stateless JWT auth via Spring Security.",
     ],
   },
   {
     title: "Distributed Key-Value Store",
-    subtitle: "Systems · Jan 2025 – Apr 2025",
-    technologies: ["Java", "TCP Sockets", "Multithreading", "Concurrency"],
+    subtitle: "Distributed Systems",
+    technologies: ["Java", "Netty", "Protocol Buffers", "ZooKeeper", "Multithreading", "JMH"],
     description: [
-      "Built a distributed in-memory key-value store in Java using TCP sockets and multithreaded request handling to support concurrent client requests with low-latency response times.",
-      "Implemented cross-node data replication and disk-based persistence to prevent data loss, enabling automatic state recovery after simulated server crashes and failure scenarios.",
-      "Improved scalability by optimizing thread pool management and reducing lock contention, increasing throughput by 35% on multi-core systems while maintaining consistency under parallel writes.",
+      "Built a distributed in-memory key-value store in Java on a non-blocking Netty server with a Protocol Buffers wire protocol, routing keys to nodes via consistent hashing.",
+      "Implemented primary–backup replication with a write-ahead log (WAL) and ZooKeeper-based failover, acking writes only after fsync and backup sync for zero acknowledged-write loss across simulated crashes.",
+      "Boosted throughput 35% over a single-global-lock baseline (JMH) via lock striping with ReentrantReadWriteLock and a bounded ExecutorService, preserving consistency under parallel writes.",
     ],
   },
   {
     title: "Alumni Portal with RAG Integration",
-    subtitle: "AI-Powered Alumni Engagement · Jan 2025 – Apr 2025",
-    technologies: ["Python", "Streamlit", "LangChain", "ChromaDB", "FAISS", "RAG"],
+    subtitle: "AI / RAG",
+    technologies: ["Python", "LangChain", "ChromaDB", "Llama 3", "Sentence-Transformers", "RAGAS"],
     description: [
-      "Developed an AI-driven alumni engagement platform using Python, LangChain, and a RAG pipeline integrated with ChromaDB and FAISS to deliver accurate, context-aware responses to alumni queries.",
-      "Built a scalable intelligent retrieval pipeline enabling personalized alumni interactions by indexing institutional knowledge into vector embeddings, improving response relevance and query resolution accuracy.",
-      "Deployed a Streamlit-based interactive UI to facilitate seamless digital communication, knowledge sharing, and alumni connectivity, reducing manual information lookup effort significantly.",
-    ],
-  },
-  {
-    title: "Animal Detection in Farms",
-    subtitle: "Computer Vision · Feb 2025",
-    technologies: ["Python", "Django", "TensorFlow", "Keras", "OpenCV"],
-    description: [
-      "Built a Django-based web application using TensorFlow/Keras and OpenCV to classify animals into Human, Domestic, and Wild categories from uploaded images and live webcam feeds.",
-      "Engineered a real-time detection pipeline integrating OpenCV's VideoCapture with a pre-trained Keras model, achieving 92% classification accuracy across varied lighting conditions and backgrounds.",
-      "Implemented secure user authentication with OTP verification, profile management, and role-based access across 10+ REST API endpoints, reducing manual farm supervision effort by 40%.",
+      "Built an alumni Q&A RAG pipeline in Python using LangChain, ChromaDB, and Llama 3 with metadata filtering (grad year, major, company), retrieving relevant records in <150 ms p95 across 4,500 profiles and FAQs.",
+      "Indexed documents via 512-token recursive chunking (64-token overlap) and bge-small-en-v1.5 embeddings, raising Recall@5 from 0.64 to 0.82 over unchunked keyword search on 200 test queries.",
+      "Enforced inline source citations via Pydantic schemas and prompt-level grounding rules in a Streamlit app, cutting unsupported answers from 28% to 4% (RAGAS) on an adversarial out-of-scope set.",
     ],
   },
   {
     title: "Image Caption Generator",
-    subtitle: "Deep Learning · Feb 2025",
-    technologies: ["Python", "InceptionV3", "LSTM", "Flask"],
+    subtitle: "Deep Learning",
+    technologies: ["Python", "TensorFlow", "Keras", "NLTK", "GloVe", "Flask"],
     description: [
-      "Built an end-to-end image captioning pipeline using InceptionV3 for CNN-based feature extraction and LSTM for sequence generation, trained on thousands of Flickr8k image-caption pairs achieving a BLEU score of 0.58.",
-      "Fine-tuned hyperparameters including sequence length, dropout, and learning rate schedules to improve caption coherence and grammatical accuracy across diverse image categories.",
-      "Deployed a Flask web application with an intuitive image upload interface, enabling users to receive real-time AI-generated captions from the trained InceptionV3 + LSTM model with minimal latency.",
+      "Built an encoder–decoder captioning pipeline in TensorFlow and Keras pairing InceptionV3 with a Bahdanau-attention LSTM decoder and GloVe embeddings, trained on 8,000 Flickr8k images (40,000 captions).",
+      "Cut training time 60% by precomputing 8×8×2048 InceptionV3 feature maps, and raised BLEU-1 from 0.51 to 0.58 via beam search (k=3), dropout tuning (0.5), and ReduceLROnPlateau.",
+      "Deployed a Flask web service caching the model weights and vocabulary tokenizer in memory, generating image captions in <350 ms p95 on CPU.",
     ],
   },
   {
     title: "LLM-Powered DevOps Assistant",
-    subtitle: "AI + DevOps · 2024",
-    technologies: ["Python", "Jenkins", "OpenAI API", "LangChain", "Prompt Engineering"],
+    subtitle: "AI + DevOps",
+    technologies: ["Python", "LangChain", "OpenAI API", "Jenkins", "GitHub Actions", "Slack API", "LangSmith"],
     description: [
-      "Architected an LLM-powered log analysis system integrating OpenAI API with Jenkins webhook triggers to automatically classify build failures across 5+ pipeline stages, cutting triage time by 50%.",
-      "Engineered a multi-turn prompt pipeline using LangChain to extract actionable root cause summaries and ranked remediation steps from unstructured CI logs, reducing mean time to resolution by 35%.",
-      "Eliminated manual log inspection for recurring failure patterns by training prompt templates on historical Jenkins build data, decreasing pipeline maintenance overhead by 40% and accelerating developer feedback cycles.",
+      "Built an LLM-powered CI failure assistant integrating the OpenAI API with Jenkins and GitHub Actions webhooks, classifying build failures across 5+ stages at 87% accuracy on 200 labeled builds.",
+      "Engineered a multi-step LangChain pipeline that pre-filters logs with tiktoken budgeting (50K→4K tokens per build) and returns root causes with ranked fixes via function calling.",
+      "Designed few-shot prompt templates from historical Jenkins failures, versioned and evaluated in LangSmith, posting structured summaries to Slack within 30s of a failed build.",
+    ],
+  },
+  {
+    title: "Farm Intrusion Classification System",
+    subtitle: "Computer Vision",
+    technologies: ["Python", "Django REST Framework", "TensorFlow", "Keras", "OpenCV", "MLflow"],
+    description: [
+      "Built a Django monitoring platform using TensorFlow, Keras, and OpenCV to classify farm intrusions across human, domestic, and wild animal classes, dispatching alerts in <500 ms.",
+      "Fine-tuned a MobileNetV2 transfer-learning classifier with OpenCV augmentation, tracked in MLflow and validated with Grad-CAM, achieving 92% test accuracy on 3,000+ images at 24 FPS on CPU.",
+      "Engineered 10+ REST API endpoints in Django REST Framework with RBAC, gating alerts at a 0.85 confidence threshold with a 10s debounce window to cut duplicate notifications by 78%.",
     ],
   },
 ];

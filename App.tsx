@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Certifications from './components/Certifications';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -15,7 +14,6 @@ const App: React.FC = () => {
       <Skills />
       <Experience />
       <Projects />
-      <Certifications />
       <Footer />
     </div>
   );

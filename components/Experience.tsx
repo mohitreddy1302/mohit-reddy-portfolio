@@ -31,9 +31,15 @@ const Experience: React.FC = () => {
                     </span>
                   </div>
                   <div className="text-violet-300/90 font-medium mb-2">{edu.degree}</div>
-                  <div className="text-sm text-slate-500 flex items-center gap-2 font-mono">
+                  <div className="text-sm text-slate-500 flex items-center gap-2 font-mono mb-3">
                      <Calendar size={14} /> {edu.period}
                   </div>
+                  {edu.coursework && (
+                    <p className="text-sm text-slate-400 leading-relaxed">
+                      <span className="font-semibold text-slate-300">Relevant Coursework: </span>
+                      {edu.coursework}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
